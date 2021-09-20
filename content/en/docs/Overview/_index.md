@@ -3,36 +3,23 @@ title: "Overview"
 linkTitle: "Overview"
 weight: 1
 description: >
-  Here's where your user finds out if your project is for them.
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+
+![INDIGO](https://pbs.twimg.com/media/Cldr8SHWYAA0JbY.png)
 
 
-The Overview is where your users find out about your project. Depending on the size of your docset, you can have a separate overview page (like this one) or put your overview contents in the Documentation landing page (like in the Docsy User Guide). 
+The INDIGO PaaS Orchestrator is a component of the PaaS layer that allows to instantiate resources on Cloud Management Frameworks \(like [OpenStack](https://www.openstack.org/) and [OpenNebula](http://opennebula.org/)\) and [Mesos](http://mesos.apache.org/) clusters.
 
-Try answering these questions for your user in this page:
+It takes the deployment requests, expressed through templates written in [TOSCA YAML Simple Profile v1.0](http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.0/TOSCA-Simple-Profile-YAML-v1.0.html), and deploys them on the best cloud site available. In order to do that 1. it gathers SLAs, monitoring info and other data from other platform services, 2. it asks to the cloud provider ranker for a list of the best cloud sites.
 
-## What is it?
+The exposed REST APIs are consumed by the Future Gateway portal. Here you can find the [REST APIs documentation](http://indigo-dc.github.io/orchestrator/restdocs/) and the [Java doc](http://indigo-dc.github.io/orchestrator/apidocs/).
 
-Introduce your project, including what it does or lets you do, why you would use it, and its primary goal (and how it achieves it). This should be similar to your README description, though you can go into a little more detail here if you want.
+### DEPENDENCIES TO OTHER SERVICES
 
-## Why do I want it?
+The PaaS Orchestrator needs the presence of the following INDIGO services:
 
-Help your user know if your project will help them. Useful information can include: 
-
-* **What is it good for?**: What types of problems does your project solve? What are the benefits of using it?
-
-* **What is it not good for?**: For example, point out situations that might intuitively seem suited for your project, but aren't for some reason. Also mention known limitations, scaling issues, or anything else that might let your users know if the project is not for them.
-
-* **What is it *not yet* good for?**: Highlight any useful features that are coming soon.
-
-## Where should I go next?
-
-Give your users next steps from the Overview. For example:
-
-* [Getting Started](/docs/getting-started/): Get started with $project
-* [Examples](/docs/examples/): Check out some example code!
-
+* [**SLAM** \(SLA Manager\)](https://indigo-dc.gitbooks.io/slam/content): allows to retrieve all the SLAs of the user
+* [**CMDB** \(Configuration Manager DataBase\)](https://indigo-dc.gitbooks.io/cmdb/content): contains all the cloud sites information, like the identity endpoint, the OCCI endpoint, etc...
+* [**Zabbix Wrapper** \(REST wrapper for Zabbix\)](https://indigo-dc.gitbooks.io/monitoring/content#1-zabbix-wrapper): allows to retrieve monitoring metrics to zabbix through a REST interface
+* [**CPR** \(Cloud Provider Ranker\)](https://www.gitbook.com/book/indigo-dc/cloud-provider-ranker/content): it receives all the information retrieved from the aforementioned services and provides the ordered list of the best sites
