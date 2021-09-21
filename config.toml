@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/orchestrator-documentation/"
 title = "PaaS Orchestrator"
 
 enableRobotsTXT = true
