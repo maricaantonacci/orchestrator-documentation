@@ -15,7 +15,7 @@ It takes the deployment requests, expressed through templates written in [TOSCA 
 
 The exposed REST APIs are consumed by the Future Gateway portal. Here you can find the [REST APIs documentation](http://indigo-dc.github.io/orchestrator/restdocs/) and the [Java doc](http://indigo-dc.github.io/orchestrator/apidocs/).
 
-### DEPENDENCIES TO OTHER SERVICES
+### Dependencies on other services
 
 The PaaS Orchestrator needs the presence of the following INDIGO services:
 
