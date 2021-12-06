@@ -193,6 +193,6 @@ enable = false
   url = "https://maricaantonacci.github.io/orchestrator-documentation/"
 
 [[params.versions]]
-  version = "v2.6.0"
-  url = "https://v0-2.kubeflow.org"
+  version = "v2.6.0-FINAL"
+  url = "https://maricaantonacci.github.io/orchestrator-documentation/v2.6.0-FINAL"
 
