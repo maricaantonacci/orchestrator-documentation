@@ -189,7 +189,7 @@ enable = false
 
 # Add your release versions here
 [[params.versions]]
-  version = "master"
+  version = "latest"
   url = "https://maricaantonacci.github.io/orchestrator-documentation/"
 
 [[params.versions]]
