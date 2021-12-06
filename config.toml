@@ -190,7 +190,7 @@ enable = false
 # Add your release versions here
 [[params.versions]]
   version = "master"
-  url = "https://master.kubeflow.org"
+  url = "https://maricaantonacci.github.io/orchestrator-documentation/"
 
 [[params.versions]]
   version = "v2.6.0"
